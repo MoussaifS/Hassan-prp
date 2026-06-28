@@ -1,0 +1,155 @@
+.section {
+  padding: var(--s-8) 0;
+  background: var(--ink);
+  color: var(--white);
+}
+
+.eyebrow {
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+.heading {
+  margin-top: var(--s-3);
+  max-width: 20ch;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 7vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+:global([lang="ar"]) .heading {
+  letter-spacing: 0;
+  line-height: 1.2;
+  max-width: 18ch;
+}
+
+/* ── Two-column layout: details + IG ── */
+.layout {
+  margin-top: var(--s-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-6);
+}
+
+@media (min-width: 800px) {
+  .layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--s-7);
+  }
+}
+
+/* ── Left column: contact rows + CTA ── */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-5);
+  flex: 1;
+}
+
+.details {
+  display: grid;
+  gap: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s-4);
+  padding: var(--s-3) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.dt {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+.dd {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: end;
+}
+
+.dd a:hover {
+  color: var(--signal);
+}
+
+.ph {
+  color: rgba(255, 255, 255, 0.25);
+  font-style: italic;
+  font-family: var(--font-text);
+  font-weight: 400;
+}
+
+/* ── Instagram feed (native blockquote embeds) ── */
+.igFeed {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.igFeed :global(.instagram-media) {
+  border-radius: var(--radius-lg) !important;
+  margin: 0 !important;
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+/* ── Instagram fallback card (shown when no post URLs are set) ── */
+.igCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--s-3);
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 400px;
+  padding: var(--s-6) var(--s-5);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: var(--white);
+  transition: border-color 0.22s ease, background 0.22s ease;
+}
+
+.igCard:hover {
+  border-color: var(--signal);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+@media (min-width: 800px) {
+  .igCard {
+    min-height: 200px;
+  }
+}
+
+.igIcon {
+  opacity: 0.5;
+}
+
+.igAt {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  letter-spacing: -0.02em;
+}
+
+.igCta {
+  font-family: var(--font-text);
+  font-size: 0.85rem;
+  color: var(--signal);
+  letter-spacing: 0.04em;
+}

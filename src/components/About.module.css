@@ -1,0 +1,19 @@
+.section {
+  padding: 10px;
+  margin-top: var(--s-4);
+  margin-bottom: var(--s-4);
+  background: var(--paper);
+}
+.title {
+  margin-top: var(--s-2);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  letter-spacing: -0.03em;
+}
+.body {
+  max-width: 640px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--graphite);
+}

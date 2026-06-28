@@ -1,0 +1,9 @@
+node_modules
+dist
+.DS_Store
+*.local
+.vite
+
+# Media assets — keep locally, deploy via CDN or hosting platform.
+public/media/
+assets/

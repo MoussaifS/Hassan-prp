@@ -1,0 +1,93 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  transition: transform 0.25s var(--ease), filter 0.25s var(--ease);
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+.circle {
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: transform 0.3s var(--ease);
+}
+.btn:hover .circle {
+  transform: rotate(45deg);
+}
+
+/* ---- sizes ---- */
+.md .label {
+  padding: 12px 20px;
+  font-size: 0.95rem;
+}
+.md .circle {
+  width: 42px;
+  height: 42px;
+}
+.lg .label {
+  padding: 20px 30px;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.lg .circle {
+  width: 60px;
+  height: 60px;
+}
+
+.block {
+  display: flex;
+  width: 100%;
+}
+.block .label {
+  flex: 1;
+  justify-content: center;
+}
+
+/* ---- variants ---- */
+.primary .label {
+  background: var(--signal);
+  color: var(--white);
+}
+.primary .circle {
+  background: var(--white);
+  color: var(--ink);
+}
+
+.light .label {
+  background: var(--white);
+  color: var(--ink);
+}
+.light .circle {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.dark .label {
+  background: var(--ink);
+  color: var(--white);
+}
+.dark .circle {
+  background: var(--signal);
+  color: var(--white);
+}
+
+/* Flip arrow icon in RTL so it points toward the reading direction */
+:global([dir="rtl"]) .circle {
+  transform: scale(-1, 1);
+}
+:global([dir="rtl"]) .btn:hover .circle {
+  transform: scale(-1, 1) rotate(45deg);
+}

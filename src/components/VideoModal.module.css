@@ -1,0 +1,218 @@
+/* ============================================================
+   Project Media Gallery Modal
+   Stage (video or photo) + scrollable thumbnail strip below.
+   ============================================================ */
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(11, 11, 12, 0.92);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--s-3);
+  animation: fadeIn 0.18s var(--ease);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to   { opacity: 1 }
+}
+
+/* ---- Panel ---- */
+.panel {
+  position: relative;
+  width: 100%;
+  max-width: 920px;
+  max-height: 92dvh;
+  background: var(--ink);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+  animation: slideUp 0.22s var(--ease);
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0 }
+  to   { transform: translateY(0);    opacity: 1 }
+}
+
+/* ---- Close button ---- */
+.close {
+  position: absolute;
+  top: var(--s-3);
+  inset-inline-end: var(--s-3);
+  z-index: 20;
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(11, 11, 12, 0.65);
+  color: var(--white);
+  backdrop-filter: blur(4px);
+  transition: background 0.2s var(--ease);
+}
+.close:hover {
+  background: rgba(11, 11, 12, 0.95);
+}
+
+/* ---- Stage ---- */
+.stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.stageAsset {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ---- Prev / Next arrows ---- */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(11, 11, 12, 0.55);
+  color: var(--white);
+  backdrop-filter: blur(4px);
+  transition: background 0.2s var(--ease), opacity 0.2s;
+}
+.nav:disabled {
+  opacity: 0.2;
+  pointer-events: none;
+}
+.nav:not(:disabled):hover {
+  background: rgba(11, 11, 12, 0.9);
+}
+.navPrev {
+  inset-inline-start: var(--s-3);
+}
+.navNext {
+  inset-inline-end: var(--s-3);
+}
+
+/* ---- Footer ---- */
+.footer {
+  flex-shrink: 0;
+  background: var(--ink);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ---- Meta line ---- */
+.meta {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-3);
+  padding: var(--s-2) var(--s-4);
+  padding-top: 14px;
+}
+.metaClient {
+  font-family: var(--font-text);
+  font-weight: 600;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--signal);
+}
+.metaTitle {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--white);
+}
+.metaCount {
+  margin-inline-start: auto;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* ---- Thumbnail strip ---- */
+.thumbsWrap {
+  overflow-x: auto;
+  padding: var(--s-2) var(--s-4) var(--s-3);
+  /* hide scrollbar visually while keeping scroll */
+  scrollbar-width: none;
+}
+.thumbsWrap::-webkit-scrollbar {
+  display: none;
+}
+
+.thumbs {
+  display: flex;
+  gap: var(--s-2);
+  width: max-content;
+}
+
+.thumb {
+  position: relative;
+  flex-shrink: 0;
+  width: 72px;
+  height: 54px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: border-color 0.18s var(--ease), opacity 0.18s;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.thumb:hover {
+  opacity: 1;
+}
+.thumbActive {
+  border-color: var(--signal);
+  opacity: 1;
+}
+
+/* Play icon overlay on video thumbnail */
+.thumbPlayIcon {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(11, 11, 12, 0.45);
+  color: var(--white);
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 600px) {
+  .backdrop {
+    padding: 0;
+    align-items: flex-end;
+  }
+  .panel {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    max-height: 94dvh;
+  }
+  .nav {
+    width: 34px;
+    height: 34px;
+  }
+}
