@@ -1,9 +1,14 @@
 node_modules
 dist
 .DS_Store
+**/.DS_Store
 *.local
 .vite
-
-# Media assets — keep locally, deploy via CDN or hosting platform.
-public/media/
 assets/
+
+# Large/incompatible media formats — exclude from git.
+# .mov files can be 400MB+; .HEIC is not browser-compatible.
+*.mov
+*.MOV
+*.HEIC
+*.heic
