@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
 import Impact from './components/Impact.jsx'
@@ -16,6 +17,7 @@ export default function App() {
       <Contact />
       <Footer />
       <FloatingCTA />
+      <Analytics />
     </>
   )
 }
