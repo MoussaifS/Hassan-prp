@@ -29,8 +29,8 @@ export const site = {
     eyebrow:   'EMCEE · Stage Host · Live Reporter · Event Announcer',
     eyebrowAr: 'مقدم فعاليات · مذيع · مراسل ميداني · معلن',
 
-    title:   'Create an event people remember. In Arabic. In English. On one stage.',
-    titleAr: 'اصنع فعالية يتذكرها الجمهور. بالعربية. بالإنجليزية. على منصة واحدة.',
+    title:   'Create an event people remember. In Arabic, In English. On one stage.',
+    titleAr: 'اصنع فعالية يتذكرها الجمهور. بالعربية, بالإنجليزية. على منصة واحدة.',
 
     video:  '/media/hero.mp4',
     poster: '/media/hero-poster.jpg',

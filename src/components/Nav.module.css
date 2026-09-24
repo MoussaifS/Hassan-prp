@@ -72,6 +72,7 @@
 .panel {
   margin: var(--s-3) var(--gutter) 0;
   background: var(--white);
+  color: var(--ink);
   border-radius: var(--radius);
   box-shadow: var(--shadow-lg);
   padding: var(--s-3);
@@ -79,6 +80,7 @@
   flex-direction: column;
 }
 .panelLink {
+  color: var(--ink);
   padding: 14px 12px;
   font-family: var(--font-display);
   font-weight: 500;
