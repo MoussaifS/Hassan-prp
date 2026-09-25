@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/thmanyah');
+
 /* ============================================================
    HASSAN — Design tokens & base styles
    Single source of truth for the brand system.
@@ -16,9 +18,9 @@
   --signal-700: #1f33cc;
 
   /* ---- Typography ---- */
-  --font-display: 'Space Grotesk', system-ui, sans-serif;
-  --font-text: 'Inter', system-ui, sans-serif;
-  --font-ar: 'IBM Plex Sans Arabic', 'Inter', sans-serif;
+  --font-display: 'Thmanyah Serif Display', 'Thmanyah', 'Space Grotesk', Georgia, serif;
+  --font-text: 'Thmanyah Sans', 'Inter', system-ui, sans-serif;
+  --font-ar: 'Thmanyah sans', 'IBM Plex Sans Arabic', 'Inter', sans-serif;
 
   /* ---- Spacing scale (8px base) ---- */
   --s-1: 4px;
@@ -53,8 +55,8 @@
    resolves to the Arabic typeface — no per-component overrides.
    ============================================================ */
 [lang="ar"] {
-  --font-display: 'IBM Plex Sans Arabic', 'Inter', sans-serif;
-  --font-text: 'IBM Plex Sans Arabic', 'Inter', sans-serif;
+  --font-display: 'Thmanyah Serif Display', 'Thmanyah', 'IBM Plex Sans Arabic', serif;
+  --font-text: 'Thmanyah', 'IBM Plex Sans Arabic', 'Inter', sans-serif;
 }
 
 [lang="ar"] body {

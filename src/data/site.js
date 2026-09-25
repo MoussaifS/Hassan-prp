@@ -29,7 +29,7 @@ export const site = {
     eyebrow:   'EMCEE · Stage Host · Live Reporter · Event Announcer',
     eyebrowAr: 'مقدم فعاليات · مذيع · مراسل ميداني · معلن',
 
-    title:   'Create an event people remember. In Arabic, In English. On one stage.',
+    title:   'Create an event people remember. In Arabic, In English, On one stage.',
     titleAr: 'اصنع فعالية يتذكرها الجمهور. بالعربية, بالإنجليزية. على منصة واحدة.',
 
     video:  '/media/hero.mp4',
@@ -52,8 +52,11 @@ export const site = {
     eyebrow:   'About',
     eyebrowAr: 'نبذة',
 
-    title:   'A successful event is measured by what people remember.',
-    titleAr: 'الفعالية الناجحة تُقاس بما يتذكره الناس.',
+    newTitle:   'A Voice That Makes Impact',
+    newTitleAr: 'نبرة تصنع الفرق',
+
+    title:   'Elevate Your Brand. Drive Real Engagement.',
+    titleAr: 'نعزّز حضور علامتك التجارية ونصنع تفاعلاً مؤثراً',
 
     body:
       "I help brands, companies and government entities deliver events that feel confident, engaging and effortless. From conferences and launches to live broadcasts, I connect every audience in Arabic and English while keeping the energy, the timing and the experience exactly where they should be.",
