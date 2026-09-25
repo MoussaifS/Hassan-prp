@@ -12,7 +12,7 @@ export default function About() {
       <div >
 
         <ScrollExpand
-          src="public/media/bw.jpg"
+          src="/media/bw.jpg"
           alt="Hassan event host and live reporter"
           title={t(newTitle, newTitleAr)}
           scrollHint={t('Scroll', 'مرر')}
